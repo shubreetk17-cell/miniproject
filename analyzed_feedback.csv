@@ -1,0 +1,5 @@
+feedback_id,teacher_name,subject_name,rating,comments,positive_count,negative_count,sentiment
+1,Shailini,Python Programming,5,The teacher explains concepts very clearly.,1,0,Positive
+3,Shailini,Python Programming,5,Excellent teaching and clear explanation.,2,0,Positive
+4,Ritu,Design and Analysis of Algorithms,5,nice,1,0,Positive
+5,Pavleen,Database Management System,3,not that much understanding level,0,0,Neutral

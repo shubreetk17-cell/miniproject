@@ -1,0 +1,369 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SmartFeedback | Student Feedback Portal</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #F5F3EA;
+    color: #102A33;
+}
+
+.layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 270px;
+    background: #102A33;
+    color: white;
+    padding: 32px 20px;
+    flex-shrink: 0;
+}
+
+.logo {
+    font-size: 23px;
+    font-weight: bold;
+    margin-bottom: 55px;
+}
+
+.logo span {
+    color: #5EEAD4;
+}
+
+.menu-title {
+    color: #8CCFC9;
+    font-size: 12px;
+    letter-spacing: 2px;
+    margin: 20px 12px;
+}
+
+.sidebar a {
+    display: block;
+    color: #DCEAE7;
+    text-decoration: none;
+    padding: 16px;
+    margin-bottom: 10px;
+    border-radius: 12px;
+    font-size: 15px;
+    transition: 0.2s;
+}
+
+.sidebar a:hover,
+.sidebar a.active {
+    background: #087F73;
+    color: white;
+}
+
+.main {
+    flex: 1;
+    padding: 38px;
+    min-width: 0;
+}
+
+.topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 35px;
+}
+
+.topbar h2 {
+    font-size: 25px;
+}
+
+.top-actions {
+    display: flex;
+    gap: 12px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 13px 23px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.btn-outline {
+    border: 1px solid #087F73;
+    color: #087F73;
+}
+
+.btn-primary {
+    background: #087F73;
+    color: white;
+}
+
+.hero {
+    background: linear-gradient(110deg, #102A33, #12665E);
+    border-radius: 22px;
+    padding: 50px 45px;
+    color: white;
+    margin-bottom: 30px;
+}
+
+.hero small {
+    color: #5EEAD4;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+.hero h1 {
+    font-size: 38px;
+    line-height: 1.2;
+    margin: 20px 0;
+    max-width: 650px;
+}
+
+.hero p {
+    line-height: 1.8;
+    max-width: 650px;
+    margin-bottom: 28px;
+    color: #DCEAE7;
+}
+
+.hero .btn {
+    background: #5EEAD4;
+    color: #102A33;
+}
+
+.section-title {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    padding: 28px;
+    border: 1px solid #DCE6E2;
+    border-radius: 17px;
+}
+
+.card-icon {
+    display: inline-block;
+    padding: 14px;
+    background: #DDF6ED;
+    border-radius: 12px;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.card h3 {
+    margin-bottom: 12px;
+}
+
+.card p {
+    color: #64748B;
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 22px;
+}
+
+.card a {
+    color: #087F73;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer {
+    text-align: center;
+    color: #64748B;
+    font-size: 13px;
+    margin-top: 45px;
+}
+
+@media (max-width: 900px) {
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        width: 220px;
+    }
+
+    .main {
+        padding: 25px;
+    }
+}
+
+@media (max-width: 650px) {
+    .layout {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .logo {
+        margin-bottom: 15px;
+    }
+
+    .main {
+        padding: 18px;
+    }
+
+    .hero {
+        padding: 30px 22px;
+    }
+
+    .hero h1 {
+        font-size: 29px;
+    }
+
+    .topbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="layout">
+
+    <!-- LEFT SIDE PANEL -->
+    <aside class="sidebar">
+
+        <div class="logo">
+            <span>✦</span> SmartFeedback
+        </div>
+
+        <div class="menu-title">MAIN MENU</div>
+
+        <a href="index.html" class="active">
+            ▦ &nbsp; Dashboard
+        </a>
+
+        <a href="feedback.jsp">
+            ✎ &nbsp; Give Feedback
+        </a>
+
+        <a href="register.jsp">
+            ◉ &nbsp; Student Registration
+        </a>
+
+        <a href="login.jsp">
+            ➤ &nbsp; Student Login
+        </a>
+
+        <!-- ANALYTICS IN LEFT SIDEBAR -->
+        <a href="analytics.jsp">
+            📊 &nbsp; View Feedback Analytics
+        </a>
+
+    </aside>
+
+    <!-- MAIN HOMEPAGE -->
+    <main class="main">
+
+        <div class="topbar">
+            <h2>Dashboard</h2>
+
+            <div class="top-actions">
+                <a href="login.jsp" class="btn btn-outline">
+                    Login
+                </a>
+
+                <a href="register.jsp" class="btn btn-primary">
+                    Sign Up
+                </a>
+            </div>
+        </div>
+
+        <section class="hero">
+
+            <small>SMART STUDENT FEEDBACK SYSTEM</small>
+
+            <h1>
+                Your Voice Matters.
+                Shape Better Learning.
+            </h1>
+
+            <p>
+                Share meaningful feedback about your teachers
+                and subjects through a secure, simple and
+                intelligent platform. Help improve the
+                academic experience.
+            </p>
+
+            <a href="login.jsp" class="btn">
+                Get Started →
+            </a>
+
+        </section>
+
+        <h2 class="section-title">Explore Your Portal</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <div class="card-icon">✎</div>
+                <h3>Submit Feedback</h3>
+                <p>
+                    Share your experience and rate your
+                    teachers and subjects.
+                </p>
+                <a href="feedback.jsp">
+                    Give Feedback →
+                </a>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">☺</div>
+                <h3>Student Registration</h3>
+                <p>
+                    Create your student account to
+                    participate in the feedback system.
+                </p>
+                <a href="register.jsp">
+                    Register Now →
+                </a>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">★</div>
+                <h3>Student Login</h3>
+                <p>
+                    Access your student portal and
+                    manage academic feedback.
+                </p>
+                <a href="login.jsp">
+                    Login Now →
+                </a>
+            </div>
+
+        </div>
+
+        <div class="footer">
+            Smart Feedback and Sentiment Analysis Portal
+        </div>
+
+    </main>
+
+</div>
+
+</body>
+</html>
